@@ -62,7 +62,7 @@ type ExpDateOption struct {
 	TradeTimeInLong        int     `json:"tradeTimeInLong"`
 	QuoteTimeInLong        int     `json:"quoteTimeInLong"`
 	NetChange              float64 `json:"netChange"`
-	Volatility             float64 `json:"volatility"`
+	Volatility             float64 `json:"volatility,string"`
 	Delta                  float64 `json:"delta"`
 	Gamma                  float64 `json:"gamma"`
 	Theta                  float64 `json:"theta"`
