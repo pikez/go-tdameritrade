@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"net/url"
+	"reflect"
 )
 
 // ChainsService handles communication with the chains related methods of
@@ -94,6 +95,24 @@ func (e ExpDateOption) GetVolatility() float64 {
 	switch e.Volatility.(type) {
 	case float64:
 		return e.Volatility.(float64)
+	case string:
+		return 0.0
+	default:
+		return 0.0
+	}
+}
+
+func (e ExpDateOption) GetValueOrNan(name string) float64 {
+	val := reflect.ValueOf(e)
+	field := val.FieldByName(name)
+	if !field.IsValid() {
+		return 0.0
+	}
+
+	value := field.Interface()
+	switch value.(type) {
+	case float64:
+		return value.(float64)
 	case string:
 		return 0.0
 	default:
