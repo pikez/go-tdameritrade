@@ -71,7 +71,7 @@ type ExpDateOption struct {
 	Rho                    interface{} `json:"rho"`
 	OpenInterest           int         `json:"openInterest"`
 	TimeValue              float64     `json:"timeValue"`
-	TheoreticalOptionValue float64     `json:"theoreticalOptionValue"`
+	TheoreticalOptionValue interface{} `json:"theoreticalOptionValue"`
 	TheoreticalVolatility  float64     `json:"theoreticalVolatility"`
 	OptionDeliverablesList string      `json:"optionDeliverablesList"`
 	StrikePrice            float64     `json:"strikePrice"`
