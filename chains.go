@@ -64,11 +64,11 @@ type ExpDateOption struct {
 	QuoteTimeInLong        int         `json:"quoteTimeInLong"`
 	NetChange              float64     `json:"netChange"`
 	Volatility             interface{} `json:"volatility"`
-	Delta                  float64     `json:"delta"`
-	Gamma                  float64     `json:"gamma"`
-	Theta                  float64     `json:"theta"`
-	Vega                   float64     `json:"vega"`
-	Rho                    float64     `json:"rho"`
+	Delta                  interface{} `json:"delta"`
+	Gamma                  interface{} `json:"gamma"`
+	Theta                  interface{} `json:"theta"`
+	Vega                   interface{} `json:"vega"`
+	Rho                    interface{} `json:"rho"`
 	OpenInterest           int         `json:"openInterest"`
 	TimeValue              float64     `json:"timeValue"`
 	TheoreticalOptionValue float64     `json:"theoreticalOptionValue"`
